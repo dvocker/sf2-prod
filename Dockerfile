@@ -9,7 +9,6 @@ RUN apt-get clean autoclean && apt-get autoremove -y && rm -rf /var/lib/{apt,cac
 WORKDIR /var/www
 
 COPY etc /etc
-COPY opt /opt
 
 RUN usermod --shell /bin/bash www-data && echo "www-data:www-data" | chpasswd
 RUN usermod --shell /bin/bash root && echo "root:root" | chpasswd
